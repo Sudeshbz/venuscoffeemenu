@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="#173f35" name="theme-color"/>
+<meta content="Venüs Coffee dijital menüsü" name="description"/>
+<title>Venüs Coffee Menü</title>
+<style>:root{--bg:#f4f3ee;--bg2:#e8ece8;--card:#ffffff;--accent:#1d5949;--accent-dark:#123d33;--accent2:#a8beb4;--text:#18231f;--muted:#69766f;--line:#dce3de;--shadow:0 18px 45px rgba(22,50,42,.16);--soft-shadow:0 12px 26px rgba(25,55,47,.08);}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;background:radial-gradient(circle at top,#eef2ef 0,#f7f6f2 48%,#f4f3ee 100%);color:var(--text)}a{text-decoration:none;color:inherit}.app{width:min(100%,520px);margin:0 auto;padding:14px 14px 34px}.menu-app{background:linear-gradient(180deg,rgba(255,247,239,.72),rgba(255,250,245,.9));min-height:100vh}.menu-hero{position:relative;overflow:hidden;border-radius:32px;min-height:292px;box-shadow:var(--shadow);background:#123d33}.hero-bg{position:absolute;inset:0;background:url("assets/kahvalti-tabagi.jpg") center/cover no-repeat;transform:scale(1.05);filter:saturate(1.04)}.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(33,21,12,.28),rgba(33,21,12,.78)),linear-gradient(90deg,rgba(29,89,73,.28),rgba(255,255,255,.05))}.hero-content{position:relative;z-index:1;height:100%;padding:22px;display:flex;flex-direction:column;justify-content:flex-end;min-height:292px;color:#fff}.brand-card{display:flex;align-items:center;gap:12px;width:max-content;max-width:100%;padding:10px 13px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(12px);border-radius:22px;box-shadow:0 10px 30px rgba(0,0,0,.13)}.brand-card img,.brand img{width:58px;height:58px;border-radius:18px;object-fit:cover;background:white}.eyebrow{margin:0;font-size:12px;letter-spacing:.5px;text-transform:uppercase;opacity:.88;font-weight:800}.brand-card h1,.brand h1{margin:2px 0 0;font-family:'Playfair Display',serif;font-size:28px;line-height:1}.hero-title{font-family:'Playfair Display',serif;font-size:30px;line-height:1.05;margin:22px 0 15px;text-shadow:0 3px 18px rgba(0,0,0,.28)}.search{background:white;border-radius:20px;padding:13px 15px;display:flex;gap:10px;align-items:center;color:#5f756b}.glass-search{background:rgba(255,255,255,.94);box-shadow:0 10px 28px rgba(0,0,0,.12)}.search input{border:0;outline:0;width:100%;font-size:15px;background:transparent;color:var(--text)}.search input::placeholder{color:#89958f}.tabs{display:flex;gap:10px;overflow:auto;padding:15px 0 13px;position:sticky;top:0;background:linear-gradient(180deg,#f4f3ee 70%,rgba(255,247,239,.82));z-index:6;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tabs button{border:1px solid rgba(234,215,195,.86);white-space:nowrap;background:rgba(255,255,255,.9);color:#52665d;border-radius:999px;padding:10px 15px;font-weight:900;box-shadow:0 8px 20px rgba(25,55,47,.08);display:flex;align-items:center;gap:7px;cursor:pointer;transition:.2s ease}.tabs button span{font-size:15px}.tabs button.active{background:linear-gradient(135deg,var(--accent),#2d6c5a);color:white;border-color:transparent;transform:translateY(-1px);box-shadow:0 12px 25px rgba(29,89,73,.24)}.menu-section{padding-top:2px}.section-head{display:flex;justify-content:space-between;align-items:end;margin:12px 2px 12px}.section-head p{margin:0;color:var(--accent);font-weight:900;font-size:13px}.section-head h2{margin:2px 0 0;font-family:'Playfair Display',serif;font-size:28px;letter-spacing:-.3px}.badge{background:white;border:1px solid var(--line);padding:8px 12px;border-radius:999px;color:var(--muted);font-size:13px;font-weight:800;box-shadow:0 8px 18px rgba(25,55,47,.06)}.menu-list{display:flex;flex-direction:column;gap:14px}.product{display:flex;align-items:center;justify-content:space-between;gap:14px;background:linear-gradient(180deg,#fff,#f7f6f2);border:1px solid var(--line);border-radius:26px;padding:13px 12px 13px 15px;box-shadow:var(--soft-shadow)}.menu-product{opacity:0;transform:translateY(8px);animation:cardIn .38s ease forwards}@keyframes cardIn{to{opacity:1;transform:translateY(0)}}.info{flex:1;min-width:0;padding-right:2px}.cat{display:inline-block;font-size:11px;color:var(--accent);background:#edf3f0;border:1px solid #dbe8e2;border-radius:999px;padding:5px 9px;font-weight:900;margin-bottom:6px}.info h3{margin:0 0 7px;font-size:19px;line-height:1.12;letter-spacing:-.2px}.info p{margin:0 0 11px;color:var(--muted);font-size:13px;line-height:1.38}.price{display:inline-flex;align-items:center;gap:4px;font-weight:900;color:#123d33;font-size:18px;background:#edf3f0;border:1px solid #dbe8e2;border-radius:999px;padding:7px 11px}.product-image-wrap{width:118px;height:118px;flex:0 0 118px;border-radius:24px;overflow:hidden;background:#e8edea;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)}.product img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s ease}.product:hover img{transform:scale(1.05)}.empty{display:none;text-align:center;color:var(--muted);padding:24px;background:white;border-radius:22px;border:1px dashed var(--line)}.menu-footer{margin-top:18px;text-align:center;color:var(--muted);font-size:12px;line-height:1.45}.admin-link{display:inline-block;margin-top:10px;color:#1d5949;font-weight:800;font-size:13px}
+/* Profesyonel zümrüt-ivory tema */
+:root{
+  --bg:#f4f3ee;
+  --bg2:#e8ece8;
+  --card:#ffffff;
+  --accent:#1d5949;
+  --accent-dark:#123d33;
+  --accent2:#a8beb4;
+  --gold:#aa8758;
+  --text:#18231f;
+  --muted:#69766f;
+  --line:#dce3de;
+  --shadow:0 24px 60px rgba(22,50,42,.16);
+  --soft-shadow:0 10px 28px rgba(25,55,47,.08);
+}
+html{background:var(--bg)}
+body{
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  background:
+    radial-gradient(circle at 15% 0%,rgba(29,89,73,.09),transparent 32rem),
+    linear-gradient(180deg,#f7f6f2 0%,#f1f2ed 100%);
+  color:var(--text);
+}
+.app{
+  width:min(100%,960px);
+  padding:18px 18px 44px;
+}
+.menu-app{background:transparent}
+.menu-hero{
+  min-height:340px;
+  border-radius:28px;
+  background:var(--accent-dark);
+  box-shadow:var(--shadow);
+  border:1px solid rgba(255,255,255,.18);
+}
+.hero-bg{
+  transform:scale(1.025);
+  filter:saturate(.72) contrast(1.05) brightness(.88);
+}
+.hero-overlay{
+  background:
+    linear-gradient(105deg,rgba(10,38,31,.92) 0%,rgba(18,61,51,.76) 48%,rgba(14,42,35,.38) 100%),
+    linear-gradient(180deg,rgba(7,26,22,.06),rgba(7,26,22,.58));
+}
+.hero-content{
+  min-height:340px;
+  padding:30px;
+  justify-content:flex-end;
+}
+.brand-card{
+  gap:13px;
+  padding:9px 13px 9px 9px;
+  border-radius:18px;
+  background:rgba(9,35,29,.42);
+  border:1px solid rgba(255,255,255,.2);
+  box-shadow:0 14px 34px rgba(0,0,0,.14);
+  backdrop-filter:blur(14px);
+}
+.brand-card img,.brand img{
+  width:60px;
+  height:60px;
+  border-radius:14px;
+  box-shadow:0 5px 15px rgba(0,0,0,.16);
+}
+.eyebrow{
+  color:#e2c79f;
+  opacity:1;
+  font-size:11px;
+  letter-spacing:1.35px;
+}
+.brand-card h1,.brand h1{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:27px;
+  letter-spacing:.2px;
+}
+.hero-title{
+  max-width:620px;
+  margin:25px 0 18px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(28px,5vw,39px);
+  line-height:1.08;
+  letter-spacing:-.6px;
+  text-shadow:0 4px 22px rgba(0,0,0,.24);
+}
+.search{
+  max-width:620px;
+  min-height:52px;
+  padding:0 17px;
+  gap:11px;
+  border-radius:15px;
+  color:var(--accent);
+  border:1px solid rgba(255,255,255,.72);
+}
+.glass-search{
+  background:rgba(255,255,255,.96);
+  box-shadow:0 13px 32px rgba(5,25,20,.2);
+  backdrop-filter:blur(12px);
+}
+.search-icon{display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.search input{
+  height:50px;
+  font-size:15px;
+  font-weight:500;
+}
+.search input::placeholder{color:#84918b}
+.tabs{
+  gap:9px;
+  padding:17px 2px 14px;
+  top:0;
+  background:rgba(244,243,238,.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(220,227,222,.8);
+}
+.tabs button{
+  min-height:42px;
+  padding:9px 14px;
+  border:1px solid #d8e0db;
+  background:rgba(255,255,255,.92);
+  color:#4e6058;
+  border-radius:13px;
+  font-size:13px;
+  font-weight:750;
+  box-shadow:none;
+  transition:transform .18s ease,background .18s ease,border-color .18s ease,color .18s ease,box-shadow .18s ease;
+}
+.tabs button:hover{
+  border-color:#a8beb4;
+  color:var(--accent-dark);
+  transform:translateY(-1px);
+}
+.tabs button.active{
+  background:var(--accent);
+  color:#fff;
+  border-color:var(--accent);
+  transform:none;
+  box-shadow:0 8px 20px rgba(29,89,73,.22);
+}
+.tabs button span{font-size:14px;filter:saturate(.7)}
+.menu-section{padding-top:8px}
+.section-head{
+  align-items:center;
+  margin:16px 3px 16px;
+}
+.section-head p{
+  color:var(--gold);
+  font-size:11px;
+  letter-spacing:1.3px;
+  text-transform:uppercase;
+}
+.section-head h2{
+  margin-top:4px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:30px;
+  color:var(--accent-dark);
+  letter-spacing:-.45px;
+}
+.badge{
+  background:#e8efeb;
+  border:1px solid #d5e0da;
+  color:#456057;
+  padding:8px 12px;
+  border-radius:10px;
+  box-shadow:none;
+  font-size:12px;
+}
+.menu-list{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+}
+.product{
+  min-height:154px;
+  gap:15px;
+  padding:14px 14px 14px 17px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:rgba(255,255,255,.96);
+  box-shadow:var(--soft-shadow);
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+.product:hover{
+  transform:translateY(-2px);
+  border-color:#c7d5ce;
+  box-shadow:0 15px 34px rgba(25,55,47,.12);
+}
+.info{padding-right:1px}
+.cat{
+  margin-bottom:8px;
+  padding:5px 8px;
+  color:#376759;
+  background:#edf3f0;
+  border:1px solid #dbe8e2;
+  border-radius:8px;
+  font-size:10px;
+  letter-spacing:.25px;
+}
+.info h3{
+  margin-bottom:7px;
+  color:#17241f;
+  font-size:18px;
+  line-height:1.18;
+}
+.info p{
+  margin-bottom:12px;
+  color:var(--muted);
+  font-size:12.5px;
+  line-height:1.46;
+  display:-webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+.price{
+  padding:0;
+  background:transparent;
+  border:0;
+  border-radius:0;
+  color:var(--accent-dark);
+  font-size:18px;
+  letter-spacing:.1px;
+}
+.product-image-wrap{
+  width:126px;
+  height:126px;
+  flex:0 0 126px;
+  border-radius:16px;
+  background:#e8edea;
+  box-shadow:inset 0 0 0 1px rgba(19,61,51,.06);
+}
+.product img{transition:transform .35s ease}
+.product:hover img{transform:scale(1.035)}
+.empty{
+  padding:30px;
+  background:rgba(255,255,255,.8);
+  border:1px dashed #bdcbc4;
+  border-radius:18px;
+}
+.menu-footer{
+  margin:24px auto 0;
+  max-width:620px;
+  color:#78837e;
+  font-size:12px;
+}
+.menu-footer:before{
+  content:"";
+  display:block;
+  width:42px;
+  height:2px;
+  margin:0 auto 14px;
+  background:var(--gold);
+  opacity:.65;
+}
+.admin-link{color:var(--accent);}
+@media(max-width:760px){
+  .app{width:100%;padding:12px 12px 32px}
+  .menu-hero{min-height:318px;border-radius:24px}
+  .hero-content{min-height:318px;padding:22px}
+  .hero-title{font-size:30px;margin:22px 0 16px}
+  .menu-list{grid-template-columns:1fr}
+  .product{min-height:145px}
+  .product-image-wrap{width:118px;height:118px;flex-basis:118px}
+}
+@media(max-width:390px){
+  .hero-content{padding:18px}
+  .brand-card img,.brand img{width:54px;height:54px}
+  .brand-card h1,.brand h1{font-size:24px}
+  .hero-title{font-size:27px}
+  .product{padding:12px;gap:11px}
+  .product-image-wrap{width:104px;height:104px;flex-basis:104px;border-radius:14px}
+  .info h3{font-size:17px}
+  .info p{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+  .menu-product{opacity:1;transform:none}
+}
+.product[hidden],.empty[hidden]{display:none!important}
+</style>
+<link href="assets/logo.jpg" rel="icon" type="image/jpeg"/><link as="image" href="assets/logo.jpg" rel="preload"/><link as="image" href="assets/kahvalti-tabagi.jpg" rel="preload"/></head>
+<body>
+<main class="app menu-app">
+<header class="menu-hero">
+<div aria-hidden="true" class="hero-bg"></div>
+<div aria-hidden="true" class="hero-overlay"></div>
+<div class="hero-content">
+<div class="brand-card">
+<img alt="Venüs Coffee Logo" decoding="async" fetchpriority="high" loading="eager" src="assets/logo.jpg"/>
+<div><p class="eyebrow">QR Dijital Menü</p><h1>Venüs Coffee</h1></div>
+</div>
+<p class="hero-title">Lezzetli kahveler, tatlılar ve atıştırmalıklar</p>
+<div class="search glass-search"><span aria-hidden="true" class="search-icon"><svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="20"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.6-3.6"></path></svg></span><input aria-label="Menüde ara" autocomplete="off" id="search" inputmode="search" placeholder="Menüde ara... örn. sütlaç, latte" type="search"/></div>
+</div>
+</header>
+<nav aria-label="Menü kategorileri" class="tabs menu-tabs" id="tabs">
+<button class="active" data-cat="Tümü" type="button"><span>✨</span>Tümü</button>
+<button data-cat="Coffee" type="button"><span>☕</span>Coffee</button>
+<button data-cat="Ice Coffee" type="button"><span>🧊</span>Ice Coffee</button>
+<button data-cat="Soğuk İçecekler" type="button"><span>🥤</span>Soğuk İçecekler</button>
+<button data-cat="Sıcak İçecekler" type="button"><span>🍵</span>Sıcak İçecekler</button>
+<button data-cat="Atıştırmalıklar" type="button"><span>🍟</span>Atıştırmalıklar</button>
+<button data-cat="Tatlılar" type="button"><span>🍰</span>Tatlılar</button>
+</nav>
+<section class="menu-section">
+<div class="section-head"><div><p>Menü</p><h2 id="title">Tüm Ürünler</h2></div><span class="badge" id="count">44 ürün</span></div>
+<div class="menu-list" id="list">
+<article class="product menu-product" data-cat="Coffee" data-search="espresso coffee yoğun aromalı espresso. 110.00 ₺"><div class="info"><span class="cat">Coffee</span><h3>Espresso</h3><p>Yoğun aromalı espresso.</p><div class="price">110.00 ₺</div></div><div class="product-image-wrap"><img alt="Espresso" decoding="async" loading="lazy" src="assets/espresso.jpg"/></div></article>
+<article class="product menu-product" data-cat="Coffee" data-search="americano coffee espresso ve sıcak su ile hazırlanır. 130.00 ₺"><div class="info"><span class="cat">Coffee</span><h3>Americano</h3><p>Espresso ve sıcak su ile hazırlanır.</p><div class="price">130.00 ₺</div></div><div class="product-image-wrap"><img alt="Americano" decoding="async" loading="lazy" src="assets/americano.png"/></div></article>
+<article class="product menu-product" data-cat="Coffee" data-search="caffe latte coffee vanilya / karamel / fındık seçenekleri 170.00 ₺ 150.00 ₺"><div class="info"><span class="cat">Coffee</span><h3>Caffe Latte</h3><p>Vanilya / Karamel / Fındık seçenekleri 170.00 ₺</p><div class="price">150.00 ₺</div></div><div class="product-image-wrap"><img alt="Caffe Latte" decoding="async" loading="lazy" src="assets/latte.png"/></div></article>
+<article class="product menu-product" data-cat="Coffee" data-search="cappuccino coffee espresso ve süt köpüğü. 150.00 ₺"><div class="info"><span class="cat">Coffee</span><h3>Cappuccino</h3><p>Espresso ve süt köpüğü.</p><div class="price">150.00 ₺</div></div><div class="product-image-wrap"><img alt="Cappuccino" decoding="async" loading="lazy" src="assets/cappuccino.jpeg"/></div></article>
+<article class="product menu-product" data-cat="Coffee" data-search="macchiato coffee espresso üzerine süt dokunuşu. 160.00 ₺"><div class="info"><span class="cat">Coffee</span><h3>Macchiato</h3><p>Espresso üzerine süt dokunuşu.</p><div class="price">160.00 ₺</div></div><div class="product-image-wrap"><img alt="Macchiato" decoding="async" loading="lazy" src="assets/macchiato.png"/></div></article>
+<article class="product menu-product" data-cat="Coffee" data-search="mocha / white mocha coffee çikolata aromalı kahve. 170.00 ₺"><div class="info"><span class="cat">Coffee</span><h3>Mocha / White Mocha</h3><p>Çikolata aromalı kahve.</p><div class="price">170.00 ₺</div></div><div class="product-image-wrap"><img alt="Mocha / White Mocha" decoding="async" loading="lazy" src="assets/mocha.png"/></div></article>
+<article class="product menu-product" data-cat="Coffee" data-search="flat white coffee yoğun espresso ve kadifemsi süt. 140.00 ₺"><div class="info"><span class="cat">Coffee</span><h3>Flat White</h3><p>Yoğun espresso ve kadifemsi süt.</p><div class="price">140.00 ₺</div></div><div class="product-image-wrap"><img alt="Flat White" decoding="async" loading="lazy" src="assets/flat-white.png"/></div></article>
+<article class="product menu-product" data-cat="Coffee" data-search="filtre kahve coffee günlük taze filtre kahve. 130.00 ₺"><div class="info"><span class="cat">Coffee</span><h3>Filtre Kahve</h3><p>Günlük taze filtre kahve.</p><div class="price">130.00 ₺</div></div><div class="product-image-wrap"><img alt="Filtre Kahve" decoding="async" loading="lazy" src="assets/filtre-kahve.jpg"/></div></article>
+<article class="product menu-product" data-cat="Coffee" data-search="sütlü filtre kahve coffee filtre kahvenin sütlü yorumu. 150.00 ₺"><div class="info"><span class="cat">Coffee</span><h3>Sütlü Filtre Kahve</h3><p>Filtre kahvenin sütlü yorumu.</p><div class="price">150.00 ₺</div></div><div class="product-image-wrap"><img alt="Sütlü Filtre Kahve" decoding="async" loading="lazy" src="assets/sutlu-filtre-kahve.jpg"/></div></article>
+<article class="product menu-product" data-cat="Ice Coffee" data-search="ice americano ice coffee soğuk americano. 140.00 ₺"><div class="info"><span class="cat">Ice Coffee</span><h3>Ice Americano</h3><p>Soğuk americano.</p><div class="price">140.00 ₺</div></div><div class="product-image-wrap"><img alt="Ice Americano" decoding="async" loading="lazy" src="assets/americano.png"/></div></article>
+<article class="product menu-product" data-cat="Ice Coffee" data-search="ice caffe latte ice coffee vanilya / karamel / fındık seçenekleri 180.00 ₺ 160.00 ₺"><div class="info"><span class="cat">Ice Coffee</span><h3>Ice Caffe Latte</h3><p>Vanilya / Karamel / Fındık seçenekleri 180.00 ₺</p><div class="price">160.00 ₺</div></div><div class="product-image-wrap"><img alt="Ice Caffe Latte" decoding="async" loading="lazy" src="assets/latte.png"/></div></article>
+<article class="product menu-product" data-cat="Ice Coffee" data-search="ice cappuccino ice coffee soğuk cappuccino. 160.00 ₺"><div class="info"><span class="cat">Ice Coffee</span><h3>Ice Cappuccino</h3><p>Soğuk cappuccino.</p><div class="price">160.00 ₺</div></div><div class="product-image-wrap"><img alt="Ice Cappuccino" decoding="async" loading="lazy" src="assets/cappuccino.jpeg"/></div></article>
+<article class="product menu-product" data-cat="Ice Coffee" data-search="ice macchiato ice coffee soğuk macchiato. 170.00 ₺"><div class="info"><span class="cat">Ice Coffee</span><h3>Ice Macchiato</h3><p>Soğuk macchiato.</p><div class="price">170.00 ₺</div></div><div class="product-image-wrap"><img alt="Ice Macchiato" decoding="async" loading="lazy" src="assets/macchiato.png"/></div></article>
+<article class="product menu-product" data-cat="Ice Coffee" data-search="ice mocha / white mocha ice coffee soğuk çikolatalı kahve. 180.00 ₺"><div class="info"><span class="cat">Ice Coffee</span><h3>Ice Mocha / White Mocha</h3><p>Soğuk çikolatalı kahve.</p><div class="price">180.00 ₺</div></div><div class="product-image-wrap"><img alt="Ice Mocha / White Mocha" decoding="async" loading="lazy" src="assets/mocha.png"/></div></article>
+<article class="product menu-product" data-cat="Ice Coffee" data-search="ice filtre kahve ice coffee soğuk filtre kahve. 135.00 ₺"><div class="info"><span class="cat">Ice Coffee</span><h3>Ice Filtre Kahve</h3><p>Soğuk filtre kahve.</p><div class="price">135.00 ₺</div></div><div class="product-image-wrap"><img alt="Ice Filtre Kahve" decoding="async" loading="lazy" src="assets/filtre-kahve.jpg"/></div></article>
+<article class="product menu-product" data-cat="Soğuk İçecekler" data-search="limonata soğuk i̇çecekler serinletici limonata. 150.00 ₺"><div class="info"><span class="cat">Soğuk İçecekler</span><h3>Limonata</h3><p>Serinletici limonata.</p><div class="price">150.00 ₺</div></div><div class="product-image-wrap"><img alt="Limonata" decoding="async" loading="lazy" src="assets/limonata.jpg"/></div></article>
+<article class="product menu-product" data-cat="Soğuk İçecekler" data-search="churchill soğuk i̇çecekler soda, limon ve tuz ile hazırlanır. 120.00 ₺"><div class="info"><span class="cat">Soğuk İçecekler</span><h3>Churchill</h3><p>Soda, limon ve tuz ile hazırlanır.</p><div class="price">120.00 ₺</div></div><div class="product-image-wrap"><img alt="Churchill" decoding="async" loading="lazy" src="assets/churchil.jpg"/></div></article>
+<article class="product menu-product" data-cat="Soğuk İçecekler" data-search="cola soğuk i̇çecekler soğuk kola. 50.00 ₺"><div class="info"><span class="cat">Soğuk İçecekler</span><h3>Cola</h3><p>Soğuk kola.</p><div class="price">50.00 ₺</div></div><div class="product-image-wrap"><img alt="Cola" decoding="async" loading="lazy" src="assets/cola-turka.jpg"/></div></article>
+<article class="product menu-product" data-cat="Soğuk İçecekler" data-search="gazoz soğuk i̇çecekler meyveli gazoz. 50.00 ₺"><div class="info"><span class="cat">Soğuk İçecekler</span><h3>Gazoz</h3><p>Meyveli gazoz.</p><div class="price">50.00 ₺</div></div><div class="product-image-wrap"><img alt="Gazoz" decoding="async" loading="lazy" src="assets/camlica-portakal.jpg"/></div></article>
+<article class="product menu-product" data-cat="Soğuk İçecekler" data-search="soda soğuk i̇çecekler limon / çilek-karpuz / elma / mandalina seçenekleri 50.00 ₺ 35.00 ₺"><div class="info"><span class="cat">Soğuk İçecekler</span><h3>Soda</h3><p>Limon / Çilek-Karpuz / Elma / Mandalina seçenekleri 50.00 ₺</p><div class="price">35.00 ₺</div></div><div class="product-image-wrap"><img alt="Soda" decoding="async" loading="lazy" src="assets/soda.jpg"/></div></article>
+<article class="product menu-product" data-cat="Soğuk İçecekler" data-search="meyve suyu soğuk i̇çecekler soğuk meyve suyu. 30.00 ₺"><div class="info"><span class="cat">Soğuk İçecekler</span><h3>Meyve Suyu</h3><p>Soğuk meyve suyu.</p><div class="price">30.00 ₺</div></div><div class="product-image-wrap"><img alt="Meyve Suyu" decoding="async" loading="lazy" src="assets/icim-meyve-suyu.jpg"/></div></article>
+<article class="product menu-product" data-cat="Soğuk İçecekler" data-search="link soğuk i̇çecekler soğuk içecek. 30.00 ₺"><div class="info"><span class="cat">Soğuk İçecekler</span><h3>Link</h3><p>Soğuk içecek.</p><div class="price">30.00 ₺</div></div><div class="product-image-wrap"><img alt="Link" decoding="async" loading="lazy" src="assets/link.jpg"/></div></article>
+<article class="product menu-product" data-cat="Soğuk İçecekler" data-search="ayran soğuk i̇çecekler soğuk ayran. 30.00 ₺"><div class="info"><span class="cat">Soğuk İçecekler</span><h3>Ayran</h3><p>Soğuk ayran.</p><div class="price">30.00 ₺</div></div><div class="product-image-wrap"><img alt="Ayran" decoding="async" loading="lazy" src="assets/ayran.jpg"/></div></article>
+<article class="product menu-product" data-cat="Soğuk İçecekler" data-search="su soğuk i̇çecekler su. 20.00 ₺"><div class="info"><span class="cat">Soğuk İçecekler</span><h3>Su</h3><p>Su.</p><div class="price">20.00 ₺</div></div><div class="product-image-wrap"><img alt="Su" decoding="async" loading="lazy" src="assets/su.jpeg"/></div></article>
+<article class="product menu-product" data-cat="Sıcak İçecekler" data-search="çay sıcak i̇çecekler demleme çay. 25.00 ₺"><div class="info"><span class="cat">Sıcak İçecekler</span><h3>Çay</h3><p>Demleme çay.</p><div class="price">25.00 ₺</div></div><div class="product-image-wrap"><img alt="Çay" decoding="async" loading="lazy" src="assets/cay.jpg"/></div></article>
+<article class="product menu-product" data-cat="Sıcak İçecekler" data-search="fincan çay sıcak i̇çecekler fincanda çay. 35.00 ₺"><div class="info"><span class="cat">Sıcak İçecekler</span><h3>Fincan Çay</h3><p>Fincanda çay.</p><div class="price">35.00 ₺</div></div><div class="product-image-wrap"><img alt="Fincan Çay" decoding="async" loading="lazy" src="assets/fincan-cay.jpg"/></div></article>
+<article class="product menu-product" data-cat="Sıcak İçecekler" data-search="türk kahvesi sıcak i̇çecekler geleneksel türk kahvesi. 80.00 ₺"><div class="info"><span class="cat">Sıcak İçecekler</span><h3>Türk Kahvesi</h3><p>Geleneksel Türk kahvesi.</p><div class="price">80.00 ₺</div></div><div class="product-image-wrap"><img alt="Türk Kahvesi" decoding="async" loading="lazy" src="assets/turk-kahvesi.jpg"/></div></article>
+<article class="product menu-product" data-cat="Sıcak İçecekler" data-search="double türk kahvesi sıcak i̇çecekler double türk kahvesi. 120.00 ₺"><div class="info"><span class="cat">Sıcak İçecekler</span><h3>Double Türk Kahvesi</h3><p>Double Türk kahvesi.</p><div class="price">120.00 ₺</div></div><div class="product-image-wrap"><img alt="Double Türk Kahvesi" decoding="async" loading="lazy" src="assets/turk-kahvesi.jpg"/></div></article>
+<article class="product menu-product" data-cat="Sıcak İçecekler" data-search="dibek kahve sıcak i̇çecekler dibek kahvesi. 90.00 ₺"><div class="info"><span class="cat">Sıcak İçecekler</span><h3>Dibek Kahve</h3><p>Dibek kahvesi.</p><div class="price">90.00 ₺</div></div><div class="product-image-wrap"><img alt="Dibek Kahve" decoding="async" loading="lazy" src="assets/dibek-kahve.jpg"/></div></article>
+<article class="product menu-product" data-cat="Sıcak İçecekler" data-search="sıcak çikolata sıcak i̇çecekler sıcak çikolata. 130.00 ₺"><div class="info"><span class="cat">Sıcak İçecekler</span><h3>Sıcak Çikolata</h3><p>Sıcak çikolata.</p><div class="price">130.00 ₺</div></div><div class="product-image-wrap"><img alt="Sıcak Çikolata" decoding="async" loading="lazy" src="assets/sicak-cikolata.jpeg"/></div></article>
+<article class="product menu-product" data-cat="Atıştırmalıklar" data-search="karışık tost atıştırmalıklar kaşar ve sucuk 160.00 ₺"><div class="info"><span class="cat">Atıştırmalıklar</span><h3>Karışık Tost</h3><p>Kaşar ve Sucuk</p><div class="price">160.00 ₺</div></div><div class="product-image-wrap"><img alt="Karışık Tost" decoding="async" loading="lazy" src="assets/karisik-tost.jpg"/></div></article>
+<article class="product menu-product" data-cat="Atıştırmalıklar" data-search="kaşarlı tost atıştırmalıklar kaşarlı tost. 140.00 ₺"><div class="info"><span class="cat">Atıştırmalıklar</span><h3>Kaşarlı Tost</h3><p>Kaşarlı tost.</p><div class="price">140.00 ₺</div></div><div class="product-image-wrap"><img alt="Kaşarlı Tost" decoding="async" loading="lazy" src="assets/kasarli-tost.jpg"/></div></article>
+<article class="product menu-product" data-cat="Atıştırmalıklar" data-search="patates kızartması atıştırmalıklar sıcak patates kızartması. 120.00 ₺"><div class="info"><span class="cat">Atıştırmalıklar</span><h3>Patates Kızartması</h3><p>Sıcak patates kızartması.</p><div class="price">120.00 ₺</div></div><div class="product-image-wrap"><img alt="Patates Kızartması" decoding="async" loading="lazy" src="assets/patates-yeni.jpg"/></div></article>
+<article class="product menu-product" data-cat="Atıştırmalıklar" data-search="kahvaltı tabağı atıştırmalıklar beyaz peynir, kaşar peynir, çeçil peyniri, gemlik zeytin, izgara yeşil zeytin, bal, çilek reçeli, haşlanmış yumurta, hindi füme, taze domates ve salatalık eşliğinde. kahvaltımıza 2 bardak çay ikramımızdır. 350.00 ₺"><div class="info"><span class="cat">Atıştırmalıklar</span><h3>Kahvaltı Tabağı</h3><p>Beyaz Peynir, Kaşar Peynir, Çeçil Peyniri, Gemlik Zeytin, Izgara Yeşil Zeytin, Bal, Çilek Reçeli, Haşlanmış Yumurta, Hindi Füme, Taze Domates ve Salatalık eşliğinde. Kahvaltımıza 2 bardak çay ikramımızdır.</p><div class="price">350.00 ₺</div></div><div class="product-image-wrap"><img alt="Kahvaltı Tabağı" decoding="async" loading="lazy" src="assets/kahvalti-tabagi.jpg"/></div></article>
+<article class="product menu-product" data-cat="Tatlılar" data-search="çilekli magnolia tatlılar taze çilek, bisküvi ve özel krema dolgusu 160.00 ₺"><div class="info"><span class="cat">Tatlılar</span><h3>Çilekli Magnolia</h3><p>Taze Çilek, Bisküvi ve özel krema dolgusu</p><div class="price">160.00 ₺</div></div><div class="product-image-wrap"><img alt="Çilekli Magnolia" decoding="async" loading="lazy" src="assets/magnolia.jpeg"/></div></article>
+<article class="product menu-product" data-cat="Tatlılar" data-search="profiterollü magnolia tatlılar kremalı muhallebi, profiterol parçaları ve özel çikolatalı sos 160.00 ₺"><div class="info"><span class="cat">Tatlılar</span><h3>Profiterollü Magnolia</h3><p>Kremalı muhallebi, profiterol parçaları ve özel çikolatalı sos</p><div class="price">160.00 ₺</div></div><div class="product-image-wrap"><img alt="Profiterollü Magnolia" decoding="async" loading="lazy" src="assets/magnolia.jpeg"/></div></article>
+<article class="product menu-product" data-cat="Tatlılar" data-search="antep fıstıklı magnolia tatlılar hafif muhallebi, bol antep fıstığı ve çıtır bisküvi 160.00 ₺"><div class="info"><span class="cat">Tatlılar</span><h3>Antep Fıstıklı Magnolia</h3><p>Hafif muhallebi, bol antep fıstığı ve çıtır bisküvi</p><div class="price">160.00 ₺</div></div><div class="product-image-wrap"><img alt="Antep Fıstıklı Magnolia" decoding="async" loading="lazy" src="assets/magnolia.jpeg"/></div></article>
+<article class="product menu-product" data-cat="Tatlılar" data-search="spoonful tatlılar kek tabanı, krema ve çikolata sosu 200.00 ₺"><div class="info"><span class="cat">Tatlılar</span><h3>Spoonful</h3><p>Kek tabanı, krema ve çikolata sosu</p><div class="price">200.00 ₺</div></div><div class="product-image-wrap"><img alt="Spoonful" decoding="async" loading="lazy" src="assets/spoonful.png"/></div></article>
+<article class="product menu-product" data-cat="Tatlılar" data-search="malaga tatlılar kek tabanı, taze muz, krema dolgusu, yoğun çikolata sosu ve yer fıstığı üzerine serpiştirilmiş antep fıstığı parçaları ile. 190.00 ₺"><div class="info"><span class="cat">Tatlılar</span><h3>Malaga</h3><p>Kek tabanı, taze muz, krema dolgusu, yoğun çikolata sosu ve yer fıstığı üzerine serpiştirilmiş Antep fıstığı parçaları ile.</p><div class="price">190.00 ₺</div></div><div class="product-image-wrap"><img alt="Malaga" decoding="async" loading="lazy" src="assets/malaga.png"/></div></article>
+<article class="product menu-product" data-cat="Tatlılar" data-search="mois pasta tatlılar kek tabanı, krema ve meyveler 230.00 ₺"><div class="info"><span class="cat">Tatlılar</span><h3>Mois Pasta</h3><p>Kek Tabanı, Krema ve Meyveler</p><div class="price">230.00 ₺</div></div><div class="product-image-wrap"><img alt="Mois Pasta" decoding="async" loading="lazy" src="assets/mois-pasta.png"/></div></article>
+<article class="product menu-product" data-cat="Tatlılar" data-search="triliçe tatlılar kek tabanı, üç çeşit süt, karamel sos veya frambuaz sos 160.00 ₺"><div class="info"><span class="cat">Tatlılar</span><h3>Triliçe</h3><p>Kek Tabanı, Üç Çeşit Süt, Karamel sos veya Frambuaz sos</p><div class="price">160.00 ₺</div></div><div class="product-image-wrap"><img alt="Triliçe" decoding="async" loading="lazy" src="assets/trilece.png"/></div></article>
+<article class="product menu-product" data-cat="Tatlılar" data-search="sütlaç tatlılar taze süt, pirinç 180.00 ₺"><div class="info"><span class="cat">Tatlılar</span><h3>Sütlaç</h3><p>Taze süt, Pirinç</p><div class="price">180.00 ₺</div></div><div class="product-image-wrap"><img alt="Sütlaç" decoding="async" loading="lazy" src="assets/sutlac-yeni.jpg"/></div></article>
+<article class="product menu-product" data-cat="Tatlılar" data-search="islak kek tatlılar çikolatalı ıslak kek. 120.00 ₺"><div class="info"><span class="cat">Tatlılar</span><h3>Islak Kek</h3><p>Çikolatalı ıslak kek.</p><div class="price">120.00 ₺</div></div><div class="product-image-wrap"><img alt="Islak Kek" decoding="async" loading="lazy" src="assets/islak-kek.jpg"/></div></article>
+</div>
+<p class="empty" hidden="" id="empty">Aradığınız ürün bulunamadı.</p>
+</section>
+<footer class="menu-footer"><p>Alerjen bilginiz varsa sipariş vermeden önce lütfen işletmeyle iletişime geçiniz.</p></footer>
+</main>
+<script>
+'use strict';
+(() => {
+  const tabs = document.getElementById('tabs');
+  const search = document.getElementById('search');
+  const title = document.getElementById('title');
+  const count = document.getElementById('count');
+  const empty = document.getElementById('empty');
+  const cards = [...document.querySelectorAll('#list .product')];
+  let active = 'Tümü';
+
+  const normalize = value => String(value || '')
+    .toLocaleLowerCase('tr-TR')
+    .trim();
+
+  function render() {
+    const query = normalize(search.value);
+    let visible = 0;
+
+    cards.forEach(card => {
+      const categoryMatches = active === 'Tümü' || card.dataset.cat === active;
+      const searchMatches = normalize(card.dataset.search).includes(query);
+      const show = categoryMatches && searchMatches;
+      card.hidden = !show;
+      if (show) visible += 1;
+    });
+
+    title.textContent = active === 'Tümü' ? 'Tüm Ürünler' : active;
+    count.textContent = `${visible} ürün`;
+    empty.hidden = visible !== 0;
+  }
+
+  tabs.addEventListener('click', event => {
+    const button = event.target.closest('button[data-cat]');
+    if (!button) return;
+    active = button.dataset.cat;
+    tabs.querySelectorAll('button').forEach(item => {
+      item.classList.toggle('active', item === button);
+    });
+    render();
+  });
+
+  search.addEventListener('input', render);
+  render();
+})();
+</script>
+</body>
+</html>
